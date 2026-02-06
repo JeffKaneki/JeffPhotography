@@ -36,3 +36,53 @@
       });
   });
   
+  // Modal logic
+const openBtn = document.getElementById("openBooking");
+const closeBtn = document.getElementById("closeBooking");
+const modal = document.getElementById("bookingModal");
+
+openBtn.addEventListener("click", () => {
+  modal.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+  
+    document.querySelectorAll(".lightbox-img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImage.src = img.src;
+        lightbox.classList.add("active");
+      });
+    });
+  
+    lightboxClose.addEventListener("click", () => {
+      lightbox.classList.remove("active");
+    });
+  
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove("active");
+      }
+    });
+  
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        lightbox.classList.remove("active");
+      }
+    });
+  
+  });
+  
