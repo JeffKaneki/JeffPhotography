@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0e0e0e;
+    color: white;
+  }
+  
+  header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 12px 30px;
+    background: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  section {
+    padding: 60px 10%;
+  }
+  
+  .gallery img, video {
+    width: 300px;
+    margin: 10px;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+  }
+  
+  button {
+    background: #ff4d4d;
+    border: none;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+  }
+  
