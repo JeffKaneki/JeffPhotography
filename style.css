@@ -1,46 +1,210 @@
-body {
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: #0e0e0e;
     color: white;
   }
   
-  header {
+  /* HERO */
+  .hero {
     height: 100vh;
+    background: url("assets/background/hero-bg.jpg") center/cover no-repeat;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin: 15px 0;
   }
   
   .btn {
-    padding: 12px 30px;
+    padding: 14px 40px;
+    font-size: 1rem;
     background: #ff4d4d;
     color: white;
-    text-decoration: none;
-    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
   }
   
-  section {
-    padding: 60px 10%;
+  .btn:hover {
+    background: #ff3333;
   }
   
-  .gallery img, video {
-    width: 300px;
-    margin: 10px;
+  /* PORTFOLIO */
+  .portfolio {
+    padding: 80px 10%;
   }
   
-  input, textarea, select {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: 260px;           /* controls tile height */
+    object-fit: cover;      /* prevents stretching */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  /* CLICKABLE CURSOR */
+.gallery img {
+    cursor: pointer;
+  }
+  
+  /* LIGHTBOX */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .lightbox.active {
+    display: flex;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    animation: zoomIn 0.3s ease;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.85);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+  }  
+  
+  .gallery img:hover {
+    transform: scale(1.04);
+  }  
+  
+  /* MODAL */
+  .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .modal.active {
+    display: flex;
+  }
+  
+  .booking-card {
+    background: #121212;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    position: relative;
+    animation: fadeUp 0.4s ease;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  .booking-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  input,
+  select,
+  textarea {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
+    border-radius: 6px;
+    border: none;
   }
   
-  button {
+  textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  .booking-card button {
+    width: 100%;
+    padding: 12px;
     background: #ff4d4d;
     border: none;
-    padding: 12px;
     color: white;
+    font-size: 1rem;
     cursor: pointer;
+  }
+  
+  #confirmation {
+    text-align: center;
+    margin-top: 10px;
+    color: #6aff6a;
   }
   
