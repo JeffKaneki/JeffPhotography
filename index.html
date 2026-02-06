@@ -3,54 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <title>Jeff Photography | Photo & Video</title>
+
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 
 <body>
-  <header>
-    <h1>Jeff Photography</h1>
-    <p>Photography & Videography</p>
-    <a href="#booking" class="btn">Book Me</a>
-  </header>
+    <!-- HERO -->
+    <section class="hero">
+    <div class="hero-overlay"></div>
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="gallery">
-      <img src="assets/photos/sample1.jpg" />
-      <img src="assets/photos/sample2.jpg" />
-      <video src="assets/videos/sample.mp4" controls></video>
+    <div class="hero-content">
+      <h1>JEFF PHOTOGRAPHY</h1>
+      <p>Professional Photography & Videography</p>
+      <button class="btn" id="openBooking">BOOK ME</button>
+      <br>
+      <br>
+      <p>Student-friendly photography with no fixed rates. Clients share the budget they’re comfortable with, and I deliver the best possible quality within that range. 
+        Affordable, flexible, and professional—perfect for students and everyday moments.</p>
     </div>
   </section>
 
-  <section id="booking">
-    <h2>Book a Session</h2>
-
-    <form id="bookingForm">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="tel" name="phone" placeholder="Phone Number" required />
-
-      <select name="service">
-        <option>Photography</option>
-        <option>Videography</option>
-        <option>Both</option>
-      </select>
-
-      <input type="text" name="location" placeholder="Event Location" required />
-      <input type="date" name="date" required />
-      <input type="time" name="time" required />
-
-      <textarea name="details" placeholder="Event details"></textarea>
-
-      <input type="number" name="budget" placeholder="Proposed Budget" />
-
-      <button type="submit">Submit Booking</button>
-    </form>
-
-    <p id="confirmation"></p>
+  <!-- PORTFOLIO -->
+  <section class="portfolio">
+    <h2>Selected Works</h2>
+    <div class="gallery">
+        <img src="assets/photos/sample1.jpg" alt="Sample 1" class="lightbox-img">
+        <img src="assets/photos/sample2.jpg" alt="Sample 2" class="lightbox-img">
+        <img src="assets/photos/sample3.jpg" alt="Sample 3" class="lightbox-img">
+        <img src="assets/photos/sample4.jpg" alt="Sample 4" class="lightbox-img">
+        <img src="assets/photos/sample5.jpg" alt="Sample 5" class="lightbox-img">
+        <img src="assets/photos/sample6.jpg" alt="Sample 6" class="lightbox-img">
+        <img src="assets/photos/sample7.jpg" alt="Sample 7" class="lightbox-img">
+      </div>
+      
+    </div>
   </section>
 
+  <!-- BOOKING MODAL -->
+  <div class="modal" id="bookingModal">
+    <div class="booking-card">
+      <span class="close-btn" id="closeBooking">&times;</span>
+
+      <h2>Book a Session</h2>
+
+      <form id="bookingForm">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <select name="service">
+          <option>Photography</option>
+          <option>Videography</option>
+          <option>Both</option>
+        </select>
+
+        <input type="text" name="location" placeholder="Event Location" required>
+        <input type="date" name="date" required>
+        <input type="time" name="time" required>
+
+        <textarea name="details" placeholder="Event details"></textarea>
+        <input type="number" name="budget" placeholder="Proposed Budget">
+
+        <button type="submit">Submit Booking</button>
+        <p id="confirmation"></p>
+      </form>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+
+  <!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img id="lightboxImage">
+  </div>
+  
 </body>
 </html>
