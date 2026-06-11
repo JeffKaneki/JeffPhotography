@@ -50,7 +50,16 @@
 
   <!-- ================= PORTFOLIO ================= -->
   <section class="portfolio reveal">
-    <h2>Selected Works</h2>
+    <div class="portfolio-heading">
+      <p class="section-kicker">Portfolio collections</p>
+      <h2>Selected Works</h2>
+      <p class="portfolio-intro">Browse real sessions, full stories, and the details that make each celebration feel personal.</p>
+    </div>
+
+    <div class="gallery-filters" id="galleryFilters" aria-label="Filter gallery collections">
+      <!-- Filter buttons generated dynamically by JavaScript -->
+    </div>
+
     <div class="gallery" id="gallery">
       <!-- Gallery items generated dynamically by JavaScript -->
     </div>
@@ -91,18 +100,28 @@
 
   <!-- ================= LIGHTBOX ================= -->
   <div class="lightbox" id="lightbox">
-    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
 
     <!-- NAVIGATION -->
-    <button class="nav prev" id="prevBtn">&#10094;</button>
-    <button class="nav next" id="nextBtn">&#10095;</button>
+    <button class="nav prev" id="prevBtn" aria-label="Previous image">
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <button class="nav next" id="nextBtn" aria-label="Next image">
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
 
     <div class="lightbox-content">
-      <img id="lightboxImage">
+      <div class="lightbox-stage">
+        <img id="lightboxImage" alt="">
+        <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+      </div>
 
       <div class="lightbox-info">
         <h3 id="imgTitle"></h3>
         <p id="imgDesc"></p>
+        <div class="lightbox-thumbs" id="lightboxThumbs" aria-label="Gallery thumbnails"></div>
       </div>
     </div>
   </div>
