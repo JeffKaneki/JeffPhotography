@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Jeff Photography - Professional photography and videography services." />
+  <title>About Jeff Photography</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <nav id="sideNav" aria-label="Main navigation">
+    <p class="nav-title">Quick Links</p>
+    <a href="index.html" class="nav-link">
+      <i class="fa-solid fa-house" aria-hidden="true"></i>
+      <span>Home</span>
+    </a>
+    <a href="aboutUI.html" class="nav-link">
+      <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      <span>About</span>
+    </a>
+  </nav>
+
+  <section class="about-page">
+    <div class="about-content">
+      <h1>About Jeff Photography</h1>
+      <p>
+        Jeff Photography is a passionate photography and videography studio dedicated to capturing the moments that matter most.
+        We specialize in creative portraits, milestone events, weddings, debuts, and memorable lifestyle sessions.
+      </p>
+      <p>
+        Our goal is to deliver Student-friendly photography with no fixed rates. Clients share the budget they’re comfortable with, and I deliver the best possible quality within that range. Affordable, flexible, and professional—perfect for students and everyday moments.
+      </p>
+      <ul>
+        <li><strong>Creative photography</strong> for pre-debuts, weddings, portraits, and events.</li>
+        <li><strong>Flexible videography</strong> packages designed to match your budget.</li>
+        <li><strong>Fast, reliable delivery</strong> with a professional finish.</li>
+        <li><strong>Personalized service</strong> built around your vision and comfort.</li>
+      </ul>
+      <p class="about-highlight">
+        This is your about page content. You can update the business story, services, and values here anytime.
+      </p>
+
+      <div class="camera-hero">
+        <div class="camera-display" id="cameraDisplay">
+          <div class="camera-overlay" id="cameraOverlay">
+            <div class="camera-label" id="cameraLabel">Canon EOS 1300D</div>
+            <div class="camera-tag">I use 18mm-55mm Lens with Auto Focus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.156.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="about-3d.js"></script>
+</body>
+</html>
